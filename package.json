@@ -1,0 +1,18 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "description": "My personal blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kvzivn/blog.git"
+  },
+  "author": "Kevin Ivan (hello@kevinivan.com)",
+  "homepage": "https://github.com/kvzivn/blog",
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "browser-sync": "^2.7.13",
+    "gulp": "^3.9.0",
+    "gulp-stylus": "^2.0.5",
+    "nano": "^6.1.4"
+  }
+}

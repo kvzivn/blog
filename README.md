@@ -1,2 +1,4 @@
-# blog
-Blog about front-end, user experience, artificial intelligence and virtual reality.
+blog
+==========
+
+mostly stuff about front-end, ux, ai, and vr.
