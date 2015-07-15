@@ -13,6 +13,7 @@
     "browser-sync": "^2.7.13",
     "gulp": "^3.9.0",
     "gulp-stylus": "^2.0.5",
+    "metalsmith": "^2.0.1",
     "nano": "^6.1.4"
   }
 }
