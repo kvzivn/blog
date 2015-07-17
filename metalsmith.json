@@ -1,7 +1,13 @@
 {
   "source": "src",
-  "destination": "build",
+  "destination": "dist",
   "plugins": {
-    "metalsmith-markdown": true
+    "metalsmith-markdown": true,
+    "metalsmith-register-partials": {
+      "directory": "layouts/partials"
+    },
+    "metalsmith-layouts": {
+      "engine": "handlebars"
+    }
   }
 }

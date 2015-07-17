@@ -13,8 +13,10 @@
     "browser-sync": "^2.7.13",
     "gulp": "^3.9.0",
     "gulp-stylus": "^2.0.5",
+    "handlebars": "^3.0.3",
     "metalsmith": "^2.0.1",
-    "metalsmith-templates": "^0.7.0",
+    "metalsmith-layouts": "^1.0.1",
+    "metalsmith-register-partials": "^1.0.2",
     "nano": "^6.1.4"
   }
 }
