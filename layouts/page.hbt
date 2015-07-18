@@ -1,7 +1,7 @@
 {{> header}}
 <h2>{{title}}</h2>
 
-<article>
-    {{{contents}}}
-</article>
+        <article>
+            {{{contents}}}
+        </article>
 {{> footer}}
