@@ -3,14 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Metalsmith Test Site</title>
-
         <meta name="viewport" content="width=device-width">
+        <title>kevinivan.com/blog</title>
     </head>
     <body>
 
         <header>
-            <h1 class="logo"><a href="/">Metalsmith Test Site</a></h1>
+            <h1 class="logo"><a href="/">kevinivan.com/blog</a></h1>
         </header>
 
 

@@ -1,12 +1,15 @@
 {{> header}}
+
 <h2>{{title}}</h2>
+
+<a href="about.html">About me</a>
 
 <article>
     <ul>
         {{#each collections.posts}}
             <li>
                 <h3>{{this.title}}</h3>
-                <article>{{this.contents}}</article>
+                <h2>{{formatDate this.date day="numeric" month="long" year="numeric"}}</h2>
             </li>
         {{/each}}
     </ul>

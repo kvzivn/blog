@@ -8,20 +8,20 @@ const reload = browserSync.reload;
 gulp.task('bs', ['styles'], () => {
     browserSync({
         server: {
-            baseDir: './'
+            baseDir: 'dist'
         },
         browser: ['google chrome canary']
     });
 
-    gulp.watch(['index.html'], reload);
-    gulp.watch(['css/*.styl'], ['styles', reload]);
+    gulp.watch(['dist/index.html'], reload);
+    gulp.watch(['src/styles/*.styl'], ['styles', reload]);
 });
 
 gulp.task('styles', () => {
-    return gulp.src('css/*.styl')
+    return gulp.src('src/styles/*.styl')
         .pipe(stylus())
         .pipe(nano())
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('default', ['bs']);

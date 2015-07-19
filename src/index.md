@@ -1,8 +1,5 @@
 ---
-title: Home
-layout: home.hbt
+title: Blog
+layout: blog.hbt
 permalink: false
 ---
-Front-end, ux, ui & vr.
-
-###Author: Kevin Ivan
