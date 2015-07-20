@@ -1,6 +1,6 @@
-            </div> {{!-- END .main-wrapper --}}
+            </div> {{!-- END .container --}}
         <footer>
-            footer
+          <p>© 2015 Kevin Ivan</p>
         </footer>
     </body>
 </html>
