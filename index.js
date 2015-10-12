@@ -7,14 +7,19 @@ var Metalsmith      = require('metalsmith'),
     Handlebars      = require('handlebars'),
     HandlebarsIntl  = require('handlebars-intl'),
     ignore          = require('metalsmith-ignore'),
-    fs              = require('fs');
+    fs              = require('fs'),
+    metadata        = require('./config')(process.argv);
 
 HandlebarsIntl.registerWith(Handlebars);
 Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/layouts/partials/header.hbt').toString());
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/layouts/partials/footer.hbt').toString());
 
+Handlebars.registerHelper('link', function(path) {
+    return metadata.baseUrl + '/' + path;
+});
+
 Metalsmith(__dirname)
-    .use(ignore('styles/*'))
+    .use(ignore('stylesheets'))
     .use(collections({
         pages: {
             pattern: 'pages/*.md'
@@ -27,7 +32,8 @@ Metalsmith(__dirname)
     }))
     .use(markdown())
     .use(permalinks({
-        pattern: ':collection/:title'
+        pattern: ':collection/:title',
+        relative: true
     }))
     .use(layouts('handlebars'))
     .destination('./dist')

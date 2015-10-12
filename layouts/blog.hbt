@@ -4,13 +4,13 @@
   <ul class="Archive-list">
     {{#each collections.posts}}
     <li class="Archive-post">
-      <a href="http://google.com">
-        <h2 class="Archive-postTitle">{{this.title}}</h2>
-        <h3 class="Archive-postDate">{{formatDate this.date day="numeric" month="long" year="numeric"}}</h3>
+      <a href="{{this.path}}">
+        <span class="Archive-postTitle">{{this.title}}</span>
+        <span class="Archive-postDate">{{formatDate this.date day="numeric" month="long" year="numeric"}}</span>
       </a>
     </li>
     {{/each}}
   </ul>
-</article>
+</div>
 
 {{> footer}}

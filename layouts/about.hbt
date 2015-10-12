@@ -1,7 +1,9 @@
 {{> header}}
-<h2>{{title}}</h2>
 
-        <article>
-            {{{contents}}}
-        </article>
+<div class="About">
+    <article>
+        {{{contents}}}
+    </article>
+</div>
+
 {{> footer}}
