@@ -15,7 +15,7 @@ Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/layouts/parti
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/layouts/partials/footer.hbt').toString());
 
 Handlebars.registerHelper('link', function(path) {
-    return metadata.baseUrl + '/' + path;
+    return metadata.baseUrl + path;
 });
 
 Metalsmith(__dirname)
