@@ -2,7 +2,6 @@ import gulp from 'gulp';
 import stylus from 'gulp-stylus';
 import nano from 'gulp-cssnano';
 import browserSync from 'browser-sync';
-import wait from 'gulp-wait';
 import run from 'gulp-run';
 
 const reload = browserSync.reload;
