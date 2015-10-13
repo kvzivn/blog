@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import stylus from 'gulp-stylus';
-import nano from 'nano';
+import nano from 'gulp-cssnano';
 import browserSync from 'browser-sync';
 import run from 'gulp-run';
 
