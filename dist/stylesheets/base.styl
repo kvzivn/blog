@@ -1,5 +1,10 @@
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
 
+COLORS = {
+    bg: #FAFAFA,
+    text: #444
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,16 +17,48 @@ html {
 }
 
 body {
-    vertical-align: baseline;
-    font-family: 'Source Sans Pro', Helvetica;
-    font-size: 100%;
-    color: #818181;
-    line-height: 1.5;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: COLORS.text;
     -webkit-font-smoothing: antialiased;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    background: #FAFAFA;
+    background: COLORS.bg;
 }
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 7.5rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3125rem;
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+p, ul, ol, pre, table, blockquote {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -29,13 +66,14 @@ footer, header, hgroup, menu, nav, section {
 }
 
 header {
-    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 footer {
     text-align: center;
     -webkit-font-smoothing: subpixel-antialiased;
-    font-weight: 400;
 }
 
 ul {
@@ -47,12 +85,10 @@ a {
     text-decoration: none;
 
     &:hover {
-        opacity: .75;
+        color: lighten(COLORS.text, 25%);
     }
 }
 
-h1 {
-    display: inline-block;
-    font-size: 3.25rem;
-    font-weight: 200;
+img {
+    max-width: 42rem;
 }

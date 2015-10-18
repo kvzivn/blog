@@ -1,26 +1,24 @@
 @import 'base';
+@import 'highlight';
 
 .Rapper {
-    margin: 5rem auto 0;
-    width: 50rem;
+    margin: 3rem auto 0;
+    width: 42rem;
 }
 
 .Icon-container {
-    display: inline-block;
-    float: right;
-    margin-top: 1.25rem;
+    margin-top: 0.5rem
 }
 
 .Icon {
-    width: 2.25rem;
-    height: 2.25rem;
-    opacity: .75;
+    width: 2rem;
+    height: 2rem;
+    opacity: .65;
     margin-left: 1rem;
-}
 
-.About {
-    margin-bottom: 2rem;
-    text-align: center;
+    &:hover {
+        opacity: .5;
+    }
 }
 
 .Archive {
@@ -28,12 +26,11 @@
 }
 
     .Archive-post {
-        padding: 2rem 1rem;
+        padding: 2rem 0;
         border-bottom: 1px solid #ccc;
     }
 
     .Archive-postTitle {
-        color: #323232;
         font-size: 1.5rem;
         font-weight: 400;
         -webkit-font-smoothing: antialiased;
@@ -41,4 +38,22 @@
 
     .Archive-postDate {
         display: block;
+    }
+
+.Post-header {
+    text-align: center;
+}
+
+    .Post-date {
+        color: lighten(COLORS.text, 50%);
+    }
+
+    .Post-tocItem {
+        display: block;
+    }
+
+    .Post-tocSubItem {
+        display: block;
+        padding-left: 2rem;
+        color: COLORS.text;
     }
