@@ -13,18 +13,21 @@
     "browser-sync": "^2.7.13",
     "glob": "^5.0.14",
     "gulp": "^3.9.0",
+    "gulp-cssnano": "^2.0.0",
     "gulp-run": "^1.6.8",
     "gulp-stylus": "^2.0.5",
-    "gulp-wait": "0.0.2",
     "handlebars": "^3.0.3",
     "handlebars-intl": "^1.1.1",
+    "highlight.js": "^8.8.0",
     "metalsmith": "^2.0.1",
+    "metalsmith-build-date": "^0.1.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-ignore": "^0.1.2",
     "metalsmith-layouts": "^1.0.1",
+    "metalsmith-markdown": "^0.2.1",
     "metalsmith-metadata": "0.0.1",
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-register-partials": "^1.0.2",
-    "nano": "^6.1.4"
+    "moment": "^2.10.6"
   }
 }
