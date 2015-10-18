@@ -1,5 +1,8 @@
 {{> header}}
-<h2>{{title}}</h2>
+<div class="Post-header">
+    <h2>{{title}}</h2>
+    <span class="Post-date">{{date date }}</span>
+</div>
 
         <article>
             {{{contents}}}
