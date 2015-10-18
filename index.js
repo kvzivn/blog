@@ -8,7 +8,10 @@ var Metalsmith      = require('metalsmith'),
     HandlebarsIntl  = require('handlebars-intl'),
     ignore          = require('metalsmith-ignore'),
     fs              = require('fs'),
-    metadata        = require('./config')(process.argv);
+    metadata        = require('./config')(process.argv),
+    moment          = require('moment'),
+    date            = require('metalsmith-build-date'),
+    hljs            = require('highlight.js');
 
 HandlebarsIntl.registerWith(Handlebars);
 Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/layouts/partials/header.hbt').toString());
@@ -18,8 +21,12 @@ Handlebars.registerHelper('link', function(path) {
     return metadata.baseUrl + path;
 });
 
+Handlebars.registerHelper('date', function(date) {
+    return moment(date).format('Do MMMM YYYY');
+});
+
 Metalsmith(__dirname)
-    .use(ignore('stylesheets'))
+    .use(ignore('src/stylesheets'))
     .use(collections({
         pages: {
             pattern: 'pages/*.md'
@@ -30,7 +37,15 @@ Metalsmith(__dirname)
             reverse: true
         }
     }))
-    .use(markdown())
+    .use(markdown({
+        gfm: true,
+        tables: true,
+        smartLists: true,
+        smartypants: true,
+        highlight: function (code, lang, callback) {
+            return hljs.highlightAuto(code).value
+        }
+    }))
     .use(permalinks({
         pattern: ':collection/:title',
         relative: true
